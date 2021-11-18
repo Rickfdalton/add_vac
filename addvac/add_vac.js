@@ -1,5 +1,10 @@
+var lat =document.querySelector("#lat");
+var lng =document.querySelector("#lon");
+
+
+
 function initMap() {
-    const myLatlng = { lat: -25.363, lng: 131.044 };
+    const myLatlng = { lat: 8.769945, lng: 80.4979 };
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
       center: myLatlng,
@@ -15,6 +20,12 @@ function initMap() {
     map.addListener("click", (mapsMouseEvent) => {
       // Close the current InfoWindow.
       infoWindow.close();
+
+      lat.placeholder=mapsMouseEvent.latLng.lat();
+      lng.placeholder=mapsMouseEvent.latLng.lng();
+      lat.value=mapsMouseEvent.latLng.lat();
+      lng.value=mapsMouseEvent.latLng.lng();
+
       // Create a new InfoWindow.
       infoWindow = new google.maps.InfoWindow({
         position: mapsMouseEvent.latLng,

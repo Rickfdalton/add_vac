@@ -6,6 +6,8 @@ form {
     right: 0;
     margin: auto;
     margin-top: 15vh;
+    float:left;
+    margin-left:20vw;
   }
   
   label {
@@ -59,6 +61,15 @@ form {
   }
   
 #map{
-  height: 100px;
-  width: 400px
+  height: 400px;
+  width: 400px;
+  float:right;
+  margin-top: 15vh;
+  margin-right:10vw;
+}
+
+#lat, #lon{
+  pointer-events: none;
+  background-color: antiquewhite;
+  border:none;
 }
